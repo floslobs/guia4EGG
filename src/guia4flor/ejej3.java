@@ -5,6 +5,8 @@
  */
 package guia4flor;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ARG
@@ -26,6 +28,20 @@ El cambio de divisas es:
 * 1.28611 $ es un 1 €
 * 129.852 yenes es un 1 €
 */
+        Scanner sc = new Scanner(System.in).useDelimiter("\n");
+        
+        System.out.println("ingrese la cantida de euros a convertir");
+        double euros = sc.nextInt();
+        convertidor(euros);
     }
     
+    public static void convertidor(double euros) {
+        double libras = 0.86 * euros;
+        double dolares = 1.28 * euros;
+        double yanes = 129.8 * euros;
+        
+        System.out.println("sus euros en libras es: "+libras);
+        System.out.println("sus euros en dolares es: "+dolares);
+        System.out.println("sus euros en yanes es: "+yanes);
+    }
 }
